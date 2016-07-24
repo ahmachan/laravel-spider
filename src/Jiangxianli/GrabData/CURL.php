@@ -6,7 +6,7 @@
  * Time: 14:49
  */
 
-namespace Jiangxianli\GrabData;
+namespace hinet\spider;
 
 
 class CURL {
