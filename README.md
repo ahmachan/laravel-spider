@@ -4,43 +4,32 @@
 
 ## 安装
 
-环境要求：PHP     >= 5.4.0
-          Laravel >= 4.2.0
+1. 通过composer安装
 
-1. 在composer.json中添加 "jiangxianli/grab-data":"dev-master".
-
-  ```json
-  "require": {
-  	  "laravel/framework": "4.2.*",
-  	  "..."
-  	   "jiangxianli/grab-data":"dev-master"
-  },
-
+  ```php
+  composer require hinet/laravel-spider
   ```
 
-2. 在app.php中添加'Jiangxianli\GrabData\GrabDataServiceProvider',， 并设置别名'GrabData'          => 'Jiangxianli\GrabData\GrabData',
+2. 在app.php中添加'hinet\spider\SpiderServiceProvider',， 并设置别名'Spider'          => 'hinet\spider\Spider',
 
   ```php
   <?php
 
   'providers' => array(
 
-		'Illuminate\Foundation\Providers\ArtisanServiceProvider',
+		Illuminate\View\ViewServiceProvider::class,
 		......
-		'Jiangxianli\GrabData\GrabDataServiceProvider',
+		hinet\spider\SpiderServiceProvider:class,
 
 	),
   'aliases' => array(
-		'App'               => 'Illuminate\Support\Facades\App',
+		'View' => Illuminate\Support\Facades\View::class,
 		......
-		'GrabData'          => 'Jiangxianli\GrabData\GrabData',
+		'Spider'          => 'hinet\spider\Spider',
 
 	),
   ...
   ```
-
-
-3.composer update -VVV
 
 
 ## 使用
@@ -68,7 +57,7 @@
       //下一级抓取URL正则匹配
       $url_reg = '/(.*[0-9]+.html)/i';
 
-      $grab_data  = new Jiangxianli\GrabData\GrabData($url,$content_reg,$depth,$link_reg,$url_reg);
+      $grab_data  = new hinet\spider\Spider($url,$content_reg,$depth,$link_reg,$url_reg);
 
       //抓取内容，回调
       $grab_data->getContent(0,function($url,$title,$content){
