@@ -6,10 +6,10 @@
  * Time: 14:47
  */
 
-namespace Jiangxianli\GrabData;
+namespace hinet\spider;
 
 
-class GrabData {
+class Spider {
 
     private $url; //抓取的网页地址
 
