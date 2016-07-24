@@ -6,7 +6,7 @@
  * Time: 23:30
  */
 
-namespace Jiangxianli\GrabData;
+namespace hinet\spider;
 
 
 //define('HDOM_TYPE_ELEMENT', 1);
