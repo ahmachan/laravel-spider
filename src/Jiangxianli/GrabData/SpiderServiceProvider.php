@@ -1,8 +1,8 @@
-<?php namespace Jiangxianli\GrabData;
+<?php namespace hinet\spider;
 
 use Illuminate\Support\ServiceProvider;
 
-class GrabDataServiceProvider extends ServiceProvider {
+class SpiderServiceProvider extends ServiceProvider {
 
 	/**
 	 * Indicates if loading of the provider is deferred.
@@ -18,7 +18,7 @@ class GrabDataServiceProvider extends ServiceProvider {
 	 */
 	public function boot()
 	{
-		$this->package('jiangxianli/grab-data');
+		$this->package('hinet/spider');
 	}
 
 	/**
