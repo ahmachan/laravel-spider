@@ -1,5 +1,5 @@
 {
-    "name": "hinet/grab-data",
+    "name": "hinet/laravel-spider",
     "description": "spider laravel",
     "authors": [
         {
@@ -20,7 +20,7 @@
             "src/migrations"
         ],
         "psr-4": {
-            "hinet\\GrabData\\": "src/"
+            "hinet\\laravel-spider\\": "src/"
         }
     },
     "minimum-stability": "stable"
